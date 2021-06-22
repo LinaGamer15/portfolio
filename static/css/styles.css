@@ -71,6 +71,6 @@ a#a-footer:hover {
 
 @media (max-width: 1000px) {
   .col {
-    flex-basics: auto !important;
+    flex-basis: auto !important;
   }
 }
