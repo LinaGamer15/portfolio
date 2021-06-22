@@ -73,4 +73,7 @@ a#a-footer:hover {
   .col {
     flex-basis: auto !important;
   }
+  .col-md-8 {
+    max-width: 0;
+  }
 }
