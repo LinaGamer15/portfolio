@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khrustitskaya Sonya</title>
+    <link rel="icon" href="static/css/images/woman.svg">
+    <link rel="stylesheet" href="static/css/styles.css" type="text/css" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+   <nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+   <div id="background">
+       <div class="container-pad text-light">
+           <div class="row">
+              <div class="col-lg-10 col-md-8 mx-auto">
+                 <div class="text-center h1" id="title">PYTHON DEVELOPER</div>
+                 <p class="text-center">Khrustitskaya Sonya</p>
+              </div>
+           </div>
+       </div>
+   </div>
+   <div>
+       {% if not posts %}
+       <div class="container container-pad">
+           <div class="row">
+               <div class="col">
+              <div class="col-lg-12 col-md-8 mx-auto text-center">
+       <a href='{{ url_for("security", do="add") }}' class="btn btn-dark btn-lg" style='margin-top: 0;' role="button">Add</a>
+              </div>
+               </div>
+           </div>
+       </div>
+       {% else: %}
+       {% for post in posts %}
+       <div class="container container-pad">
+           <div class="row">
+               <div class="col">
+              <div class="col-lg-12 col-md-8 mx-auto">
+                  <h3 class="post_title">{{ post.name }}</h3>
+                  <p>{{ post.description }} <a href="{{ post.link_git }}">Code in GitHub</a></p>
+              </div>
+               </div>
+               <div class="row">
+               <div class="col">
+              <div class="col-lg-12 col-md-8 mx-auto">
+                  <img class='col-lg-12 col-md-8 mx-auto rounded float-right' id="image" src="{{ post.img_url }}" alt="site photo" style="padding: 0;">
+              </div>
+               </div>
+               </div>
+           </div>
+           <div class="col">
+               <div class="row">
+               <div class="col-lg-12 col-md-8 mx-auto" style="padding-right: 0;">
+                   <a href='{{ post.link_product }}' class="btn btn-primary btn-lg float-left" role="button">Site</a>
+               <a href='{{ url_for("security", do="add") }}' class="btn btn-dark btn-lg float-right ml-3" role="button">Add</a>
+               <a href='{{ url_for("security", do="delete", post_id=post.id) }}' class="btn btn-danger btn-lg float-right ml-3" role="button">Delete</a>
+                   <a href='{{ url_for("security", do="update", post_id=post.id) }}' class="btn btn-secondary btn-lg float-right ml-3" role="button">Update</a>
+               </div>
+           </div>
+           </div>
+       </div>
+   </div>
+   {% endfor %}
+       {% endif %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous" ></script>
+</body>
+<footer class="background-footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12 col-md-8 mx-auto text-center">
+              <a id='a-footer' href="#">Projects</a>
+              <p style="font-size: 14px; color: #848d95; margin-top: 10px;">© 2021 Khrustitskaya Sonya</p>
+              </div>
+      </div>
+  </div>
+</footer>
+</html>

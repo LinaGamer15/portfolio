@@ -1,0 +1,51 @@
+html {
+ font-family: 'Roboto', Arial,sans-serif;
+}
+
+p {
+  font-weight: 300;
+  font-size: 25px;
+}
+
+div#background {
+  background-image: url('images/background.jpg')
+}
+
+div#title {
+  font-weight: 600;
+  color: #fff;
+  font-size: 95px;
+  margin: 60px 0 60px 0;
+}
+
+#mainNav {
+  background: #fff;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+}
+
+.container-pad {
+  padding: 5rem;
+}
+
+.btn {
+  margin: 40px 0 15px 0;
+}
+
+.post_title {
+ color: #007bff
+}
+
+.background-footer {
+  background: #343a40;
+  padding: 1rem;
+}
+
+a#a-footer {
+  color: #848d95;
+  text-decoration: none;
+}
+a#a-footer:hover {
+  color: #d6d9dc;
+}
