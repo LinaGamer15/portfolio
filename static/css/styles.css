@@ -79,6 +79,6 @@ a#a-footer:hover {
 .col-md-8 {
     -ms-flex: 0 0 66.666667% !important;
     flex: 0 0 66.666667% !important;
-    max-width: 0 !important;
+    max-width: 100% !important;
 }
 }
