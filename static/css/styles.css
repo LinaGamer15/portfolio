@@ -73,7 +73,11 @@ a#a-footer:hover {
   .col {
     flex-basis: auto !important;
   }
-  .col-md-8 {
+}
+
+@media (min-width: 768px)
+.col-md-8 {
+    -ms-flex: 0 0 66.666667% !important;
+    flex: 0 0 66.666667% !important;
     max-width: 0 !important;
-  }
 }
