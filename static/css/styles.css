@@ -59,7 +59,7 @@ a#a-footer:hover {
   color: #d6d9dc;
 }
 
-@media (min-width: 1359px) {
+@media (max-width: 1359px) {
   .background-footer {
     position: fixed;
     right: 0;
