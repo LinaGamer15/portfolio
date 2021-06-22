@@ -4,15 +4,16 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired, URL
 from flask_sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'jfdjskfdjakKKkkdskfjdskjdskKCDSJF9392408JKkdsjks1021w9'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///portfolio.db'
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL1', "sqlite:///portfolio.db")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 Bootstrap(app)
 db = SQLAlchemy(app)
 
-ADD_DELETE_KEY = '4039kdsloeDJakm,1kfmsdfldsdpm'
+ADD_DELETE_KEY = os.environ.get('APP_DELETE_KEY')
 
 
 class Post(db.Model):
