@@ -47,14 +47,14 @@
        <div class="container container-pad">
            <div class="row">
                <div class="col">
-              <div class="col-lg-12 col-sm-8 mx-auto">
+              <div class="col-lg-12 col-sm-6 col-md-4 mx-auto">
                   <h3 class="post_title">{{ post.name }}</h3>
                   <p>{{ post.description }} <a href="{{ post.link_git }}">Code in GitHub</a></p>
               </div>
                </div>
                <div class="row">
                <div class="col">
-              <div class="col-lg-12 col-sm-8 mx-auto">
+              <div class="col-lg-12 col-sm-6 col-md-4 mx-auto">
                   <img class='col-lg-12 col-md-8 mx-auto rounded float-right' id="image" src="{{ post.img_url }}" alt="site photo" style="padding: 0;">
               </div>
                </div>
@@ -62,7 +62,7 @@
            </div>
            <div class="col">
                <div class="row">
-               <div class="col-lg-12 col-sm-8 mx-auto" style="padding-right: 0;">
+               <div class="col-lg-12 col-sm-6 col-md-4 mx-auto" style="padding-right: 0;">
                    <a href='{{ post.link_product }}' class="btn btn-primary btn-lg float-left" role="button">Site</a>
                <a href='{{ url_for("security", do="add") }}' class="btn btn-dark btn-lg float-right ml-3" role="button">Add</a>
                <a href='{{ url_for("security", do="delete", post_id=post.id) }}' class="btn btn-danger btn-lg float-right ml-3" role="button">Delete</a>
