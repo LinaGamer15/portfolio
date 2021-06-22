@@ -46,14 +46,14 @@
        {% for post in posts %}
        <div class="container container-pad">
            <div class="row">
-               <div class="col-auto">
+               <div class="col coll">
               <div class="col-lg-12 col-md-8 mx-auto">
                   <h3 class="post_title">{{ post.name }}</h3>
                   <p>{{ post.description }} <a href="{{ post.link_git }}">Code in GitHub</a></p>
               </div>
                </div>
                <div class="row">
-               <div class="col-auto">
+               <div class="col coll">
               <div class="col-lg-12 col-md-8 mx-auto">
                   <img class='col-lg-12 col-md-8 mx-auto rounded float-right' id="image" src="{{ post.img_url }}" alt="site photo" style="padding: 0;">
               </div>
@@ -61,7 +61,7 @@
                </div>
            </div>
            <div class="row">
-               <div class="col-auto">
+               <div class="col coll">
                <div class="col-lg-12 col-md-8 mx-auto" style="padding-right: 0;">
                    <a href='{{ post.link_product }}' class="btn btn-primary btn-lg float-left" role="button">Site</a>
                <a href='{{ url_for("security", do="add") }}' class="btn btn-dark btn-lg float-right ml-3" role="button">Add</a>

@@ -68,3 +68,10 @@ a#a-footer:hover {
     z-index: 1030;
   }
 }
+
+@media (max-width: 800px) {
+  .coll {
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
+}
