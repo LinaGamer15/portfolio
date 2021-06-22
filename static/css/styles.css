@@ -11,8 +11,10 @@ p {
 }
 
 div#background {
-  background-image: fixed url('images/background.jpg') 0% 0%;
+  background-image: fixed url('images/background.jpg')
   background-size: cover;
+  background-attachment: fixed;
+  background-size: 0% 0%;
 }
 
 div#title {
