@@ -33,7 +33,7 @@ div#title {
 }
 
 .container-pad {
-  padding-top: 5rem;
+  padding: 5rem 0;
 }
 
 .btn {
