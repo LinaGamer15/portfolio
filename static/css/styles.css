@@ -70,8 +70,7 @@ a#a-footer:hover {
 }
 
 @media (max-width: 1000px) {
-  .coll {
-    flex: 0 0 auto;
-    max-width: 100% !important;
+  .col {
+    flex-basics: auto !important;
   }
 }
