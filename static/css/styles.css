@@ -69,7 +69,7 @@ a#a-footer:hover {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1600px) {
   .coll {
     flex: 0 0 auto;
     max-width: 100%;
