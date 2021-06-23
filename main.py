@@ -26,7 +26,7 @@ class Post(db.Model):
     link_product = db.Column(db.String(250), nullable=False)
 
 
-db.create_all()
+# db.create_all()
 
 
 class KeyForm(FlaskForm):
