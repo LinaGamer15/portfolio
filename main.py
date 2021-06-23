@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect, request
+from flask import Flask, render_template, url_for, redirect, request, flash
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
@@ -68,6 +68,8 @@ def security(do):
             return redirect(url_for('add'))
         elif form.key.data == ADD_DELETE_KEY and do == 'update':
             return redirect(url_for('update', post_id=request.args.get('post_id')))
+        else:
+            flash('Wrong Key!')
     return render_template('secret.html', form=form)
 
 
