@@ -13,7 +13,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 Bootstrap(app)
 db = SQLAlchemy(app)
 
-ADD_DELETE_KEY = os.environ.get('APP_DELETE_KEY')
+ADD_DELETE_KEY = os.environ.get('ADD_DELETE_KEY')
 
 
 class Post(db.Model):
